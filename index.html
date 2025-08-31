@@ -2,56 +2,79 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Empresa Exemplo</title>
+  <title>Contato - Empresa Exemplo</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 20px;
     }
+
     header {
       background-color: #004080;
       color: white;
       padding: 20px;
       text-align: center;
     }
-    nav ul {
-      list-style-type: none;
-      padding: 0;
-      text-align: center;
+
+    form {
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    nav ul li {
-      display: inline;
-      margin: 0 15px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #004080;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
       font-weight: bold;
     }
-    section {
-      margin-top: 30px;
-      text-align: center;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #003060;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bem-vindo à Empresa </h1>
-    <p>Soluções inteligentes para o seu negócio</p>
+    <h1>Entre em Contato</h1>
+    <p>Preencha o formulário abaixo e retornaremos em breve.</p>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="form.html">Formulário de Contato</a></li>
-      <li><a href="contato.html">Fale Conosco</a></li>
-    </ul>
-  </nav>
+  <form action="mailto:seuemail@empresa.com" method="post" enctype="text/plain">
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" required>
 
-  <section>
-    <h2>Sobre Nós</h2>
-    <p>Somos uma empresa dedicada a oferecer serviços de qualidade e atendimento personalizado.</p>
-  </section>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone">
+
+    <input type="submit" value="Enviar">
+  </form>
 </body>
 </html>
+
